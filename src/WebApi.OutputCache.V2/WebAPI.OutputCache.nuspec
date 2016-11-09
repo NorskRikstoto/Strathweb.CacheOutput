@@ -1,0 +1,20 @@
+﻿<?xml version="1.0"?>
+<package>
+    <metadata>
+        <id>WebAPI.OutputCache</id>
+        <version>1.0.0</version>
+        <title>WebAPI.OutputCache</title>
+        <authors>Filip W</authors>
+        <owners>Filip W</owners>
+        <projectUrl>https://github.com/filipw/Strathweb.CacheOutput</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Strathweb.CacheOutput</description>
+        <releaseNotes></releaseNotes>
+        <copyright>Filip W</copyright>
+        <tags>webapi cache</tags>
+    </metadata>
+    <files>
+        <file src="bin\Release\WebApi.OutputCache.V2.dll" target="lib\net451" />
+        <file src="bin\Release\WebApi.OutputCache.Core.dll" target="lib\net451" />
+    </files>
+</package>
