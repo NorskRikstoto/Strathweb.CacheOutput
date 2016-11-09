@@ -43,14 +43,20 @@ namespace WebApi.OutputCache.V2.Tests.TestControllers
             return "test";
         }
 
-        [CacheOutput(ClientTimeSpan = 50, Private = true)]
+        [CacheOutput(ClientTimeSpan = 50, AllowedCacheLocation = AllowedCacheLocation.Private)]
         public string Get_c50_private()
         {
             return "test";
         }
 
-        [CacheOutput(Private = true)]
+        [CacheOutput(AllowedCacheLocation = AllowedCacheLocation.Private)]
         public string Get_private()
+        {
+            return "test";
+        }
+
+        [CacheOutput(AllowedCacheLocation = AllowedCacheLocation.Public)]
+        public string Get_public()
         {
             return "test";
         }

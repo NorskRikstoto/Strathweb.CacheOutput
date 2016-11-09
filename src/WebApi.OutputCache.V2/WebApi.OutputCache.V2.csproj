@@ -54,6 +54,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AllowedCacheLocation.cs" />
     <Compile Include="AutoInvalidateCacheOutputAttribute.cs" />
     <Compile Include="BaseCacheAttribute.cs" />
     <Compile Include="CacheOutputConfiguration.cs" />

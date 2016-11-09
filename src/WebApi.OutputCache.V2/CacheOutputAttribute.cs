@@ -53,10 +53,7 @@ namespace WebApi.OutputCache.V2
         /// </summary>
         public bool NoCache { get; set; }
 
-        /// <summary>
-        /// Corresponds to CacheControl Private HTTP header. Response can be cached by browser but not by intermediary cache
-        /// </summary>
-        public bool Private { get; set; }
+        public AllowedCacheLocation AllowedCacheLocation { get; set; }
 
         /// <summary>
         /// Class used to generate caching keys
@@ -242,13 +239,14 @@ namespace WebApi.OutputCache.V2
 
         protected virtual void ApplyCacheHeaders(HttpResponseMessage response, CacheTime cacheTime)
         {
-            if (cacheTime.ClientTimeSpan > TimeSpan.Zero || MustRevalidate || Private)
+            if (cacheTime.ClientTimeSpan > TimeSpan.Zero || MustRevalidate || AllowedCacheLocation != AllowedCacheLocation.Undefined)
             {
                 var cachecontrol = new CacheControlHeaderValue
                                        {
                                            MaxAge = cacheTime.ClientTimeSpan,
                                            MustRevalidate = MustRevalidate,
-                                           Private = Private
+                                           Private = AllowedCacheLocation == AllowedCacheLocation.Private,
+                                           Public = AllowedCacheLocation == AllowedCacheLocation.Public
                                        };
 
                 response.Headers.CacheControl = cachecontrol;

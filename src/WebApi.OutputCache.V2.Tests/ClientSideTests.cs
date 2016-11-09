@@ -170,12 +170,21 @@ namespace WebApi.OutputCache.V2.Tests
         }
 
         [Test]
-        public void private_true_headers_correct()
+        public void allowedcachelocation_private_headers_correct()
         {
             var client = new HttpClient(_server);
             var result = client.GetAsync(_url + "Get_private").Result;
 
             Assert.IsTrue(result.Headers.CacheControl.Private);
+        }
+
+        [Test]
+        public void allowedcachelocation_public_headers_correct()
+        {
+            var client = new HttpClient(_server);
+            var result = client.GetAsync(_url + "Get_public").Result;
+
+            Assert.IsTrue(result.Headers.CacheControl.Public);
         }
 
         [TestFixtureTearDown]
