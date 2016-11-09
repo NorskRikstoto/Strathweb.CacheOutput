@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.OutputCache.Core", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.OutputCache.V2", "WebApi.OutputCache.V2\WebApi.OutputCache.V2.csproj", "{7A6F57F6-38E1-4287-812E-AD7D1025BA5E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.OutputCache.V2.Tests", "WebApi.OutputCache.V2.Tests\WebApi.OutputCache.V2.Tests.csproj", "{1267460B-C100-48AD-B2E2-9DDE2E40F052}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7A6F57F6-38E1-4287-812E-AD7D1025BA5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A6F57F6-38E1-4287-812E-AD7D1025BA5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A6F57F6-38E1-4287-812E-AD7D1025BA5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1267460B-C100-48AD-B2E2-9DDE2E40F052}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1267460B-C100-48AD-B2E2-9DDE2E40F052}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1267460B-C100-48AD-B2E2-9DDE2E40F052}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1267460B-C100-48AD-B2E2-9DDE2E40F052}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
